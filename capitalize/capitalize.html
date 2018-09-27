@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<input type="" name="" v-model='money'>
+{{money}}
+<br>{{msg | capitalize}}<!--首字母大写-->
+<body>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				msg:'abcd',
+				money:''
+			}
+		})
+	</script>
+</body>
+</html>
