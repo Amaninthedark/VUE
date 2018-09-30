@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 几个点 
+	1.翻转之前本来就是反的。
+	2.二级菜单要绝对定位。 
+	3.延迟效果
+-->
+	<style>
+	   *{
+	   	margin: 0;
+	   	padding: 0;
+	   }
+		.nav{
+			width: 1024px;
+			height: 600px;
+			background: red;
+			margin: 0 auto;
+			margin-top: 100px;
+
+		}
+		.nav>li {
+			list-style: none;
+			background: black;
+			width: 160px;
+			height: 60px;
+		    float: left;
+		    margin-left: 40px;
+		    color: white;
+		    text-align: center;
+		    line-height: 60px;
+		    position: relative;
+		}
+		.sub{
+			top:60px;
+			left: 0px;
+			width: 160px;
+			position: absolute;
+		}
+		.sub li {
+			list-style: none;
+			height: 60px;
+			background: pink;
+			transform: rotateY(180deg);
+			transition: all 1s;
+			opacity: .0;
+		}
+		.nav>li:hover .sub li{
+             transform:none;
+             opacity: 1;
+
+		}
+		.nav>li:hover .sub li:nth-child(1){
+			transition-delay: 0ms;
+		}
+		.nav>li:hover .sub li:nth-child(2){
+			transition-delay: 200ms;
+		}
+		.nav>li:hover .sub li:nth-child(3){
+			transition-delay: 400ms;
+		}
+		.nav>li:hover .sub li:nth-child(4){
+			transition-delay: 600ms;
+		}
+		.nav>li:hover .sub li:nth-child(5){
+			transition-delay: 800ms;
+		}
+	/*	.nav>li .sub li:nth-child(5){
+			transition-delay: 0ms;
+		}
+		.nav>li .sub li:nth-child(4){
+			transition-delay: 200ms;
+		}
+		.nav>li .sub li:nth-child(3){
+			transition-delay: 400ms;
+		}
+		.nav>li .sub li:nth-child(2){
+			transition-delay: 600ms;
+		}
+		.nav>li .sub li:nth-child(1){
+			transition-delay: 800ms;
+		}*/
+  
+	</style>
+</head>
+<body>
+		<ul class="nav">
+			<li>一级菜单
+				<ul class="sub">
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				</ul>
+			</li>
+			<li>一级菜单
+				<ul class="sub">
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+				<ul class="sub">
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+				<ul class="sub">
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				</ul></li>
+			<li>一级菜单
+				<ul class="sub">
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				   <li>二级菜单</li>
+				</ul></li>
+				
+	    </ul>
+	</body>
+</html>
