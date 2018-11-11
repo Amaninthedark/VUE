@@ -1,0 +1,40 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title>
+    <script type="text/javascript" src='js/bower_components/vue/dist/vue.min.js'></script>
+    <script type="text/javascript" src='js/bower_components/vue-resource/dist/vue-resource.min.js'></script> 
+</head>
+<body>
+<input type="text" name="" id='input'>
+<ul id='ul'>
+	
+</ul>
+
+<script type="text/javascript">
+	function leo(json){
+		ul.innerHTML = '';
+		//console.log(json);
+		for(var i = 0;i < json.s.length;i++){
+			var oLi = document.createElement('li');
+			oLi.innerHTML = json.s[i]
+			ul.appendChild(oLi);
+		}
+
+	}
+
+	input.oninput=function(){
+		var oS = document.createElement('script');
+		oS.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&cb=leo';
+		document.head.appendChild(oS);
+		oS.remove();
+	}
+
+
+
+</script>
+
+</script>
+</body>
+</html>

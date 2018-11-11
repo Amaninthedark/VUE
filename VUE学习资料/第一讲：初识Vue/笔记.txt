@@ -1,0 +1,83 @@
+vue - 国人开始制作的
+view
+
+0.x  0.6版  13-12月
+1.x         15-10月
+2.x         16-09月
+
+react因为版权原因 百度
+vue一度的泛滥。
+
+mvvm
+
+jquery 一梭子代码就出来 事件驱动的框架
+vue 一块json 就完事 有点像angular 数据驱动
+
+只有ie8以上的浏览器才会兼容
+
+使用vue 第一步
+引入 vue
+
+new Vue(json)
+
+el -> vue 输出的作用域
+data -> 输出的数据
+
+{{}} -> 在作用域里面放入咱们输出的模版 模版里面放入data里面你定义的变量。
+
+el 类似咱们jquery
+
+常用指令
+angular  ng-show  ng-repeat ng-model
+
+v-show display  true／false  true = 显示 false =隐藏
+
+json - > 键值对
+左边是键 右边是值
+
+v-for {{$index}} => 索引值
+{{$key}} => key值
+
+双向绑定
+
+数据 和 输出进行绑定 
+v-model
+
+事件
+v-on:click
+@clcik  我更推荐这个 因为短
+
+
+事件对象
+$event
+
+默认第一个参数就是咱们的事件对象
+
+防止冒泡
+1.event.cancelBubble = true
+2.event.stopPropagation();
+
+推荐
+@click.stop 
+
+阻止默认事件
+1.event.preventDefault
+
+推荐
+@click.prevent
+
+
+键盘事件
+
+keydown/up 
+keyCode
+
+keydown.65.66.68
+keydown.left...
+
+el 作用域/ data 数据/ methods 事件
+
+
+
+
+

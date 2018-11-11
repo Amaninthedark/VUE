@@ -1,0 +1,44 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title>
+    <script type="text/javascript" src='js/bower_components/vue/dist/vue.min.js'></script>
+    <script type="text/javascript" src='js/bower_components/vue-resource/dist/vue-resource.min.js'></script> 
+</head>
+<body>
+用户名:<input type="text" v-model='user'><br>
+密码:<input type="text" v-model='password'><br>
+<input type="button" name="" value="提交" @click='login'>
+
+<script type="text/javascript">
+	
+	new Vue({
+		el:'body',
+		data:{
+			user:'',
+			password:''
+		},
+		methods:{
+			login:function(){
+				//console.log(this.$http)
+				this.$http.get('http://localhost:2133123/getMsg',{
+					user:this.user,
+					pass:this.password
+				}).then(function(data){
+					//console.log(data)
+					if(data.data.ok == 1){
+						alert(data.data.msg)
+					}
+					else{
+						alert('失败了')
+					}
+				}).catch(function(){
+					alert('比较大的问题')
+				})
+			}
+		}
+	})
+</script>
+</body>
+</html>

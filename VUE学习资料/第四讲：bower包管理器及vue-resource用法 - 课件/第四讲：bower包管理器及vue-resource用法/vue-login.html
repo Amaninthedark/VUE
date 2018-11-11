@@ -1,0 +1,30 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title>
+    <script type="text/javascript" src='js/bower_components/vue/dist/vue.min.js'></script>
+    <script type="text/javascript" src='js/bower_components/vue-resource/dist/vue-resource.min.js'></script> 
+</head>
+<body>
+用户名:<input type="text" v-model='user'><br>
+密码:<input type="text" v-model='password'><br>
+<input type="button" name="" value="提交" @click='login'>
+
+<script type="text/javascript">
+	
+	new Vue({
+		el:'body',
+		data:{
+			user:'',
+			password:''
+		},
+		methods:{
+			login:function(){
+				console.log(this.user,this.password)
+			}
+		}
+	})
+</script>
+</body>
+</html>

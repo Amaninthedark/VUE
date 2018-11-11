@@ -1,0 +1,29 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <script type="text/javascript" src='vue.min.js'></script>
+    <style type="text/css">
+    	
+    </style>
+</head>
+<body>
+	<div v-for='i in arr'>{{i}}{{$index}}</div>
+<script type="text/javascript">
+	new Vue({
+		el:'body',
+		data:{
+			arr:['a','b','c'],
+			json:{
+				leo:'18',
+				sky:'29',
+				mot:'20'
+			}
+		}
+	})
+
+// var arr = ['a','b','c']
+</script>
+</body>
+</html>
