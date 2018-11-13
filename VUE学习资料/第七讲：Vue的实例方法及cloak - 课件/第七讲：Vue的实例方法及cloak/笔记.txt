@@ -1,0 +1,11 @@
+实例方法
+
+$mount('') 这个级别没有el高
+$data 就是data
+$el 可以帮咱们获取原生的dom对象
+$options 获取自定义属性/正常属性
+$log 可以快速帮咱们看到data的内容
+$destroy 销毁对象
+
+v-track
+

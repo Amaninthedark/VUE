@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset ="UTF-8">
+	<title>访问请求</title>
+	<script type="text/javascript" src='js/bower_components/vue/dist/vue.min.js'></script>
+	<script type="text/javascript" src='js/bower_components/vue-resource/dist/vue-resource.min.js'></script> 
+</head>
+<body>
+	<ul v-for='i in msg'>
+		<li v-for='j in i' v-bind:key="item.id">{{j}}</li>
+	</ul>
+	{{msg}}
+	<input type="button" name="" value="查看" @click='ready'>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				msg:'123'
+			},
+			methods:{
+				ready:function (argument) {
+					// body...
+					this.$http.get('https://www.sxscott.com/crazyBird/vote/getAction/slide',{
+
+					}).then(function(data){
+						console.log(data);
+						this.msg=data.body.items;
+					}).catch(function(){
+
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>

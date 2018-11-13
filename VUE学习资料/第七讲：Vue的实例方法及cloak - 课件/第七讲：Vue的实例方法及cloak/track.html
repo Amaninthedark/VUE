@@ -1,0 +1,29 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title>
+    <script type="text/javascript" src='vue.js'></script> 
+</head>
+<body>
+<button @click='add'>点击添加</button>
+<ul v-for='i in arr' track-by="$index">
+	<li>{{i}}</li>
+</ul>
+
+
+<script type="text/javascript">
+	new Vue({
+		el:'body',
+		data:{
+			arr:['郝志硕','史闯','单秉阳']
+		},
+		methods:{
+			add(){
+				this.arr.push('刘佳宇');
+			}
+		}
+	})
+</script>
+</body>
+</html>

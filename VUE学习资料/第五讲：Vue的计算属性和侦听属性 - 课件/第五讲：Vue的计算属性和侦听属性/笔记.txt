@@ -1,0 +1,32 @@
+1.计算属性
+
+data 
+
+computed - 可以计算的属性 计算咱们的data
+
+属性 必须是函数 
+c:function(){
+	return 计算输出值
+}
+
+need:{
+	//读取
+	get:function(){
+
+	},
+	//设置
+	set:function(){
+
+	}
+}
+
+
+$watch() <- 看 盯着 回调函数 帮咱们执行 《- angular watch
+
+watch 真正的数据发现改了 才会触发回调函数了
+
+a.$watch(数据,function(){
+	
+})
+
+

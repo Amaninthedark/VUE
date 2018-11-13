@@ -1,0 +1,28 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title></title> 
+    <script type="text/javascript" src='js/bower_components/vue/dist/vue.js'></script>
+</head>
+<body>
+<input type="text" name="" v-model='a'> + 
+<input type="text" name="" v-model='b'> =
+{{c}}
+<script type="text/javascript">
+	new Vue({
+		el:'body',
+		data:{
+			a:'',
+			b:''
+		},
+		computed:{
+			c:function(){
+				return Number(this.a) + Number(this.b);
+			}
+		}
+	
+	})
+</script>
+</body>
+</html>

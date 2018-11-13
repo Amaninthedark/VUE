@@ -1,0 +1,167 @@
+v-show display  true／false  true = 显示 false =隐藏
+
+json - > 键值对
+左边是键 右边是值
+
+v-for {{$index}} => 索引值
+{{$key}} => key值
+
+双向绑定
+
+数据 和 输出进行绑定 
+v-model
+
+事件
+v-on:click
+@clcik  我更推荐这个 因为短
+
+
+事件对象
+$event
+
+默认第一个参数就是咱们的事件对象
+
+防止冒泡
+1.event.cancelBubble = true
+2.event.stopPropagation();
+
+推荐
+@click.stop 
+
+阻止默认事件
+1.event.preventDefault
+
+推荐
+@click.prevent
+
+
+键盘事件
+
+keydown/up 
+keyCode
+
+keydown.65.66.68
+keydown.left...
+
+el 作用域/ data 数据/ methods 事件
+
+
+-------------------------------------------VUE 访问请求
+
+node 安装完后 有个一包管理器 叫npm
+
+npm 有个方法叫做 install
+
+npm install bower -g
+
+bower 只是npm包管理器中的其中一个包 - 包管理器
+
+bower info vue<->版本
+
+如果直接下载 默认是 最高的版本
+
+bower i 下载库的名字#版本号
+
+vue本身并没有给咱们提供这个交互的方法
+
+推荐了一个插件 vue-resource
+
+demo <->
+登陆 
+输入用户名
+输入密码
+登陆按钮
+登陆成功 -》 成功 -》 用户名密码错误
+
+用户名 : leo
+密码  : 111
+
+get / post
+
+this.$http->get/post
+
+this.$http.get('地址',{
+	
+}).then(function(){},function(){
+	
+})
+
+this.$http.get('地址',{
+	
+}).then(function(){}).catch(function(){
+	
+})
+
+this.$http.post('地址',{
+	
+}).then(function(){}).catch(function(){
+	
+})
+
+
+JSONP =》 跨域用的
+jsonp -x- json 
+
+a网站  请求- b后台的接口
+      跨域
+
+src 
+
+https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=1&cb=leo
+
+function asda(json){
+	
+}
+asda({q:"1",p:false,s:["1688阿里巴巴批发网","163","12306","163邮箱登陆","126","126邮箱登陆","139邮箱登陆","12306铁路客户服务中心","17173","1688"]});
+
+百度下拉
+
+
+vue 1.x - get / post / jsonp
+
+jsonp=> 回调函数的key值
+
+
+--------------------------------------------------计算属性
+
+data 
+
+computed - 可以计算的属性 计算咱们的data
+
+属性 必须是函数 
+c:function(){
+	return 计算输出值
+}
+
+need:{
+	//读取
+	get:function(){
+
+	},
+	//设置
+	set:function(){
+
+	}
+}
+
+
+$watch() <- 看 盯着 回调函数 帮咱们执行 《- angular watch
+
+watch 真正的数据发现改了 才会触发回调函数了
+
+a.$watch(数据,function(){
+	
+})
+
+
+
+-------------------------------------实例方法
+
+$mount('') 这个级别没有el高
+$data 就是data
+$el 可以帮咱们获取原生的dom对象
+$options 获取自定义属性/正常属性
+$log 可以快速帮咱们看到data的内容
+$destroy 销毁对象
+
+v-track
